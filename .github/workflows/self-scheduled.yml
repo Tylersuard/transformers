@@ -7,12 +7,9 @@ name: Self-hosted runner (scheduled)
 # `docker/transformers-pytorch-deepspeed-latest-gpu/Dockerfile`
 
 on:
-  repository_dispatch:
-  schedule:
-    - cron: "17 2 * * *"
   push:
     branches:
-      - run_scheduled_ci*
+      - run_daily_ci
 
 env:
   HF_HOME: /mnt/cache
